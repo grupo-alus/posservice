@@ -1,0 +1,17 @@
+{
+    "name": "grupo-alus/posservice",
+    "description": "Client for Purchase Orders Micro Service",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "GrupoAlus\\POsService\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Artziel Narvaiza",
+            "email": "artziel@alus.com.mx"
+        }
+    ],
+    "require": {}
+}
