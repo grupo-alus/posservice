@@ -42,11 +42,17 @@ class POsClient {
         return $this->request('GET', "/orders/statistics/");
     }
 
+    public function GetBuyerStatistics($buyer_reference) {
+        $buyer_reference = urlencode($buyer_reference);
+        return $this->request('GET', "/{$buyer_reference}/orders/statistics");
+    }
+
     public function GetPo($id) {
         return $this->request('GET', "/orders/{$id}/");
     }
 
     public function GetPosByBuyer($buyer_reference) {
+        $buyer_reference = urlencode($buyer_reference);
         return $this->request('GET', "/{$buyer_reference}/orders/");
     }
 
