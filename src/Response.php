@@ -43,27 +43,27 @@ class Response {
 
     public function IsOK()
     {
-        return $this->status < 400  ? true : false;
+        return $this->_status >= 200 && $this->_status < 400 ? true : false;
     }
 
     public function IsUnauthorized()
     {
-        return $this->status == 401 ? true : false;
+        return $this->_status == 401 ? true : false;
     }
 
     public function IsForbidden()
     {
-        return $this->status == 403 ? true : false;
+        return $this->_status == 403 ? true : false;
     }
 
     public function IsNotFound()
     {
-        return $this->status == 404 ? true : false;
+        return $this->_status == 404 ? true : false;
     }
 
     public function IsInternalServerError()
     {
-        return $this->status == 500 ? true : false;
+        return $this->_status == 500 ? true : false;
     }
 
 }

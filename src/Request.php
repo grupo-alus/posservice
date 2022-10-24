@@ -97,7 +97,7 @@ class Request {
         $body = \curl_exec($ch);
         $status = \curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-        $response = new Response($status, $responseHeaders, $body);
+        $response = new Response($status, $responseHeaders, $body == FALSE ? "" : $body);
 
         return $response;
     }
