@@ -83,6 +83,7 @@ class Request {
             \curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         }
         \curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        \curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         \curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $responseHeaders = [];
